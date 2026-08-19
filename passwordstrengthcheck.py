@@ -8,7 +8,7 @@ lowercase_found = False
 uppercase_found = False
 digits_found = False
 special_found = False
-
+previous = ""
 # Check every character
 for p in password:
 
@@ -24,7 +24,9 @@ for p in password:
     if not p.isalnum():
         special_found = True
 
-
+    if previous == p:
+        print("repitition detected")
+    previous = p
 # Common passwords
 common_passwords = [
     "password",
@@ -76,3 +78,4 @@ elif score == 4:
 
 else:
     print("Password Strength: VERY STRONG")
+
