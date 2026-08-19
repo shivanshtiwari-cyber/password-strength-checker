@@ -25,7 +25,7 @@ for p in password:
         special_found = True
 
     if previous == p:
-        print("repitition ddetected")
+        print("repitition detected")
     previous = p
 # Common passwords
 common_passwords = [
